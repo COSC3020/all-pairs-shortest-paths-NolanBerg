@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/2i4vCRmk)
 # All Pairs Shortest Paths
 
 In the lectures, we've seen Dijkstra's algorithm for finding the shortest paths
@@ -28,3 +29,22 @@ the function and run automatically when you commit through a GitHub action.
 
 What is the worst-case time complexity ($\Theta$) of the algorithm? Add your
 answer, including your reasoning, to this markdown file.
+
+Sources: Used ai for this assignment
+
+FW Algorithm:
+
+     ```javascript
+     for (let k = 0; k < n; k++) {
+         for (let i = 0; i < n; i++) {
+             for (let j = 0; j < n; j++) {
+                 if (dist[i][j] > dist[i][k] + dist[k][j]) {
+                     dist[i][j] = dist[i][k] + dist[k][j];
+                 }
+             }
+         }
+     }
+     ```
+Each of the three loops runs $(V)$ times, leading to $(V \times V \times V = V^3)$ iterations.
+
+So we have a time complexity of $\Theta(V^3)$.
