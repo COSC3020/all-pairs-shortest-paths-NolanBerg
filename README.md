@@ -29,3 +29,22 @@ the function and run automatically when you commit through a GitHub action.
 
 What is the worst-case time complexity ($\Theta$) of the algorithm? Add your
 answer, including your reasoning, to this markdown file.
+
+Sources: Used ai for this assignment
+
+FW Algorithm:
+
+     ```javascript
+     for (let k = 0; k < n; k++) {
+         for (let i = 0; i < n; i++) {
+             for (let j = 0; j < n; j++) {
+                 if (dist[i][j] > dist[i][k] + dist[k][j]) {
+                     dist[i][j] = dist[i][k] + dist[k][j];
+                 }
+             }
+         }
+     }
+     ```
+Each of the three loops runs $(|V|)$ times, leading to $(|V| \times |V| \times |V| = |V|^3)$ iterations.
+
+So we have a time complexity of $\Theta(|V|^3)$.
