@@ -45,6 +45,6 @@ FW Algorithm:
          }
      }
      ```
-Each of the three loops runs $(|V|)$ times, leading to $(|V| \times |V| \times |V| = |V|^3)$ iterations.
+Each of the three loops runs $(V)$ times, leading to $(V \times V \times V = V^3)$ iterations.
 
-So we have a time complexity of $\Theta(|V|^3)$.
+So we have a time complexity of $\Theta(V^3)$.
